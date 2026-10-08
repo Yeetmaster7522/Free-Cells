@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Free Cell</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&family=Cinzel" rel="stylesheet">
+
+    <script defer src="card-v3.js"></script>
+    <script defer src="deck-v3.js"></script>
+    <script defer src="stack.js"></script>
+    <script defer src="uiManager.js"></script>
+    <script defer src="audioPlayer.js"></script>
+    <script defer src="settings.js"></script>
+    <script defer src="commands.js"></script>
+    <script defer src="gameLoop.js"></script>
+
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div id="upper">
+        <div id="free-cells">
+            <div id="cell0" class="free-cell"></div>
+            <div id="cell1" class="free-cell"></div>
+            <div id="cell2" class="free-cell"></div>
+            <div id="cell3" class="free-cell"></div>
+        </div>
+        <div id="cellBack">
+            <div class="cell-back"></div>
+            <div class="cell-back"></div>
+            <div class="cell-back"></div>
+            <div class="cell-back"></div>
+        </div>
+        <div id="foundation-piles">
+            <div id="Hfoundation" class="foundation-pile"></div>
+            <div id="Cfoundation" class="foundation-pile"></div>
+            <div id="Dfoundation" class="foundation-pile"></div>
+            <div id="Sfoundation" class="foundation-pile"></div>
+        </div>
+    </div>
+    <div id="pile-back">
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+        <div class="cell-back"></div>
+    </div>
+    <div id="piles">
+        <div id="pile0" class="pile"></div>
+        <div id="pile1" class="pile"></div>
+        <div id="pile2" class="pile"></div>
+        <div id="pile3" class="pile"></div>
+        <div id="pile4" class="pile"></div>
+        <div id="pile5" class="pile"></div>
+        <div id="pile6" class="pile"></div>
+        <div id="pile7" class="pile"></div>
+    </div>
+    <div id="commands">
+        <button type="button" class="command" id="undo-button">Undo</button>
+        <button type="button" class="command" id="reset-button">Reset Game</button>
+        <button type="button" class="command" id="new-button">New Game</button>
+        <button type="button" class="command" id="settings-button">Settings</button>
+    </div>
+
+    <div id="settings">
+        <button id="escape-button">X</button>
+        <div class="settings-container">
+            <label for="automove">Primitive automove:</label>
+            <input type="checkbox" name="automove" id="automove">
+        </div>
+        <div class="settings-container">
+            <label for="theme">Choose theme</label>
+            <select name="theme" id="theme">
+                <option value="base">Base</option>
+                <option value="dessert">Dessert</option>
+                <option value="galaxy">Galaxy</option>
+                <option value="hellish">Hellish</option>
+                <option value="icy">Icy</option>
+                <option value="nature">Nature</option>
+                <option value="starry">Starry</option>
+            </select>
+        </div>
+        <div class="settings-container">
+            <label for="background-file-custom">Custom background file:</label>
+            <input type="file" name="background-file-custom" id="background-file-custom">
+        </div>
+        <div class="settings-container">
+            <label for="volume">Volume:</label>
+            <input type="range" name="volume" id="volume" min="0" max="1" step="0.1" value="1">
+        </div>
+        <div class="settings-container">
+            <label for="dark-mode">Dark mode enabled:</label>
+            <input type="checkbox" name="dark-mode" id="dark-mode">
+        </div>
+        <div class="settings-container">
+            <label for="goofy">Goofy mode:</label>
+            <input type="checkbox" name="goofy" id="goofy">
+        </div>
+        <div class="settings-container">
+            <label for="shuffle">Shuffle enabled:</label>
+            <input type="checkbox" name="shuffle" id="shuffle" checked>
+        </div>
+    </div>
+
+    <div id="end-screen">
+        <h1 id="text">GAME END</h1>
+    </div>
+</body>
+</html>
